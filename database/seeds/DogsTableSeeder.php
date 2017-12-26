@@ -11,10 +11,10 @@ class DogsTableSeeder extends Seeder
      */
     public function run()
     {
-    \DB::table('dogs')->truncate();
-    \DB::table('dogs')->insert(['name' => 'Joe']);
-    \DB::table('dogs')->insert(['name' => 'Jock']);
-    \DB::table('dogs')->insert(['name' => 'Jackie']);
-    \DB::table('dogs')->insert(['name' => 'Jane']);
+        \App\Dogs::truncate();
+        \App\Dogs::create(['name'=>'Joe', 'age'=>5]);
+        \App\Dogs::create(['name'=> 'Jock', 'age'=>7]);
+        \App\Dogs::create(['name'=> 'Jackie', 'age'=>2]);
+        \App\Dogs::create(['name'=> 'Jane', 'age'=> 9]);
     }
 }
